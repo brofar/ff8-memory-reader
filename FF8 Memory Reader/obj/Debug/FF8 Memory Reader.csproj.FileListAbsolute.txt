@@ -1,6 +1,0 @@
-C:\Users\Behrawr\Documents\SharpDevelop Projects\FF8 Memory Reader\FF8 Memory Reader\bin\Debug\FF8 Memory Reader.exe.config
-C:\Users\Behrawr\Documents\SharpDevelop Projects\FF8 Memory Reader\FF8 Memory Reader\bin\Debug\FF8 Memory Reader.exe
-C:\Users\Behrawr\Documents\SharpDevelop Projects\FF8 Memory Reader\FF8 Memory Reader\bin\Debug\FF8 Memory Reader.pdb
-C:\Users\Behrawr\Documents\SharpDevelop Projects\FF8 Memory Reader\FF8 Memory Reader\obj\Debug\FF8 Memory Reader.csprojResolveAssemblyReference.cache
-C:\Users\Behrawr\Documents\SharpDevelop Projects\FF8 Memory Reader\FF8 Memory Reader\obj\Debug\FF8 Memory Reader.exe
-C:\Users\Behrawr\Documents\SharpDevelop Projects\FF8 Memory Reader\FF8 Memory Reader\obj\Debug\FF8 Memory Reader.pdb
