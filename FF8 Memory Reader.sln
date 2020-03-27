@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 5.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF8 Memory Reader", "FF8 Memory Reader\FF8 Memory Reader.csproj", "{09F957BF-48C6-4FCB-AC09-2EF363BFD89C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09F957BF-48C6-4FCB-AC09-2EF363BFD89C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F957BF-48C6-4FCB-AC09-2EF363BFD89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F957BF-48C6-4FCB-AC09-2EF363BFD89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F957BF-48C6-4FCB-AC09-2EF363BFD89C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
