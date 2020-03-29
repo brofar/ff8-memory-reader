@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FFVIIIDrawPoints.cs" />
     <Compile Include="FFVIIIMagic.cs" />
     <Compile Include="FFVIIILocation.cs" />
     <Compile Include="FFVIIIProgress.cs" />

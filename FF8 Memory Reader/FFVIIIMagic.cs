@@ -7,7 +7,7 @@ namespace FF8_Memory_Reader
 {
     public class FFVIIIMagic
     {
-        public Dictionary<int, string> magicList { get; };
+        public Dictionary<int, string> magicList { get; }
 
         public FFVIIIMagic()
         {
