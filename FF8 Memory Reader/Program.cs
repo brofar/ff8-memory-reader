@@ -32,13 +32,45 @@ namespace FF8_Memory_Reader
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x1928008, ByteLength = 4, Description = "Enemy 4 HP", Show = "InBattle" });
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FF5C0, ByteLength = 2, Description = "AP to Earn", Show = "InBattle" });
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FF574, ByteLength = 2, Description = "XP to Earn", Show = "InBattle" });
-
-            //Non Battle
-            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE9C8, ByteLength = 2, Description = "SeeD Pts.", Show = "InField" });
-            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE764, ByteLength = 4, Description = "Gil", Show = "InField" });
+            
+            //Field
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE9C8, ByteLength = 2, Description = "SeeD Pts.",   Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE764, ByteLength = 4, Description = "Gil",         Show = "InField" });
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE9CC, ByteLength = 2, Description = "Battles Won", Show = "InField" });
-            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE9D2, ByteLength = 2, Description = "Escaped", Show = "InField" });
-            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE928, ByteLength = 4, Description = "Play Time", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE9D2, ByteLength = 2, Description = "Escaped",     Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE928, ByteLength = 4, Description = "Play Time",   Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAB8, ByteLength = 2, Description = "Story Progress", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18D2FC0, ByteLength = 2, Description = "Current Map", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEA0C, ByteLength = 2, Description = "Last Area",   Show = "InField" });
+
+            //Triple Triad
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAC8, ByteLength = 1, Description = "Card Game Rules Balamb", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAC9, ByteLength = 1, Description = "Card Game Rules Galbadia", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEACA, ByteLength = 1, Description = "Card Game Rules Trabia", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEACB, ByteLength = 1, Description = "Card Game Rules Centra", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEACC, ByteLength = 1, Description = "Card Game Rules Dollet", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEACD, ByteLength = 1, Description = "Card Game Rules FH", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEACE, ByteLength = 1, Description = "Card Game Rules Space", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEACF, ByteLength = 1, Description = "Card Game Rules Esthar", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAD0, ByteLength = 1, Description = "Card Game Trade Rule Balamb", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAD1, ByteLength = 1, Description = "Card Game Trade Rule Galbadia", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAD2, ByteLength = 1, Description = "Card Game Trade Rule Trabia", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAD3, ByteLength = 1, Description = "Card Game Trade Rule Centra", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAD4, ByteLength = 1, Description = "Card Game Trade Rule Dollet", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAD5, ByteLength = 1, Description = "Card Game Trade Rule FH", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAD6, ByteLength = 1, Description = "Card Game Trade Rule Space", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEAD7, ByteLength = 1, Description = "Card Game Trade Rule Esthar", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEADA, ByteLength = 1, Description = "Card Game Last Region Played", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEADB, ByteLength = 1, Description = "Card Game Second Last Region Played", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEFAC, ByteLength = 1, Description = "Card Game Wins", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEFAE, ByteLength = 1, Description = "Card Game Losses", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FEFB0, ByteLength = 1, Description = "Card Game Draws", Show = "InField" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x19CD798, ByteLength = 1, Description = "Card Game In Battle?", Show = "InField" });
+
+
+
+            //Centra
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE940, ByteLength = 2, Description = "Tonberry Kills", Show = "InField" });
 
             Timer t = new Timer(GetValues, null, 0, 500);
 

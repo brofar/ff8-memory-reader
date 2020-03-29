@@ -7,8 +7,12 @@ namespace FF8_Memory_Reader
 {
     class FFVIIIDrawPoint
     {
+        //Bytelength for draw points is always 1 byte.
         public int locationId { get; set; }
         public int spellId { get; set; }
         public int memoryOffset { get; set; }
+        
+        //Whether it's the 1st-4th drawpoint at this address
+        public int pointNumber { get; set; }
     }
 }
