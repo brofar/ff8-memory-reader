@@ -1,7 +1,6 @@
 # ff8-memory-reader
-Reads specific memory addresses from FF8_EN (PC non-remaster)
-
-C#
+Reads specific memory addresses from FF8_EN (PC non-remaster).
+I made this to display real-time stats from the game during my Twitch stream.
 
 ## TO DO
 * This README file.
