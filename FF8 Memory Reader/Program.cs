@@ -25,6 +25,14 @@ namespace FF8_Memory_Reader
 
         public static void Main(string[] args)
         {
+
+            var triad = new FFVIIITripleTriad();
+
+            Console.ReadLine();
+
+            System.Environment.Exit(0);
+
+            //Battle
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FF848, ByteLength = 4, Description = "In Battle" });
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927D98, ByteLength = 4, Description = "Enemy 1 HP", Show = "InBattle" });
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927E68, ByteLength = 4, Description = "Enemy 2 HP", Show = "InBattle" });
@@ -32,7 +40,21 @@ namespace FF8_Memory_Reader
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x1928008, ByteLength = 4, Description = "Enemy 4 HP", Show = "InBattle" });
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FF5C0, ByteLength = 2, Description = "AP to Earn", Show = "InBattle" });
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FF574, ByteLength = 2, Description = "XP to Earn", Show = "InBattle" });
-            
+
+            //ATB: 12000 = Full
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927B24, ByteLength = 2, Description = "Slot 1 ATB", Show = "InBattle" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927B28, ByteLength = 2, Description = "Slot 1 Current HP", Show = "InBattle" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927B2C, ByteLength = 2, Description = "Slot 1 Max HP", Show = "InBattle" });
+
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927BF4, ByteLength = 2, Description = "Slot 2 ATB", Show = "InBattle" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927BF8, ByteLength = 2, Description = "Slot 2 Current HP", Show = "InBattle" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927BFC, ByteLength = 2, Description = "Slot 2 Max HP", Show = "InBattle" });
+
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927CC4, ByteLength = 2, Description = "Slot 3 ATB", Show = "InBattle" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927CC8, ByteLength = 2, Description = "Slot 3 Current HP", Show = "InBattle" });
+            addresses.Add(new FFVIIIComponent { AddressOffset = 0x1927CCC, ByteLength = 2, Description = "Slot 3 Max HP", Show = "InBattle" });
+
+
             //Field
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE9C8, ByteLength = 2, Description = "SeeD Pts.",   Show = "InField" });
             addresses.Add(new FFVIIIComponent { AddressOffset = 0x18FE764, ByteLength = 4, Description = "Gil",         Show = "InField" });
@@ -137,7 +159,7 @@ namespace FF8_Memory_Reader
                     {
                         inBattle = (i == 1);
                     }
-                    if (inBattle == offset.InBattle)
+                    if (inBattle && offset.Show == "InBattle")
                     {
                         modify_file(offset.Description, output);
                     }

@@ -296,6 +296,7 @@ namespace FF8_Memory_Reader
         }
         public string GetDrawPoint(int locationId)
         {
+            return "k";
             //TODO
         }
     }
