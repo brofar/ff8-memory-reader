@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FFVIIIMap.cs" />
     <Compile Include="FFVIIIDrawPoint.cs" />
     <Compile Include="FFVIIITripleTriad.cs" />
     <Compile Include="FFVIIIDrawPoints.cs" />
