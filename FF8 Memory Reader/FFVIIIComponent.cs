@@ -10,6 +10,6 @@ namespace FF8_Memory_Reader
         public int AddressOffset { get; set; }
         public uint ByteLength { get; set; }
         public string Description { get; set; }
-        public string Show { get; set; } //Always / InBattle / InField / InCardGame
+        //public string Show { get; set; } //Always / InBattle / InField / InCardGame
     }
 }

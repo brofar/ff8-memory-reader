@@ -70,5 +70,14 @@ namespace FF8_Memory_Reader
             magicList.Add(55, "Catastrophe (unused)");
             magicList.Add(56, "The End");
         }
+
+        public string getSpell(int spellId)
+        {
+            if (magicList.ContainsKey(spellId))
+            {
+                return magicList[spellId];
+            }
+            return "???";
+        }
     }
 }
