@@ -7,7 +7,7 @@ namespace FF8_Memory_Reader
 {
     public class FFVIIIMagic
     {
-        public Dictionary<int, string> magicList { get; }
+        private Dictionary<int, string> magicList { get; }
 
         public FFVIIIMagic()
         {
@@ -69,6 +69,28 @@ namespace FF8_Memory_Reader
             magicList.Add(54, "Percent (unused)");
             magicList.Add(55, "Catastrophe (unused)");
             magicList.Add(56, "The End");
+
+            //The following are enemy GF draw IDs.
+            //Used when a GF is drawable from a boss, etc.
+            //Draw will fail if we already have the GF so 
+            //this is probably safe to modify.
+            magicList.Add(64, "Quezacotl");
+            magicList.Add(65, "Shiva");
+            magicList.Add(66, "Ifrit");
+            magicList.Add(67, "Siren");
+            magicList.Add(68, "Brothers");
+            magicList.Add(69, "Diablos");
+            magicList.Add(70, "Carbuncle");
+            magicList.Add(71, "Leviathan");
+            magicList.Add(72, "Pandemona");
+            magicList.Add(73, "Cerberus");
+            magicList.Add(74, "Alexander");
+            magicList.Add(75, "Doomtrain");
+            magicList.Add(76, "Bahamut");
+            magicList.Add(77, "Cactuar");
+            magicList.Add(78, "Tonberry");
+            magicList.Add(79, "Eden");
+
         }
 
         public string getSpell(int spellId)

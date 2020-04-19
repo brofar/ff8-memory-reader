@@ -996,6 +996,15 @@ namespace FF8_Memory_Reader
             locationList.Add(980, -1);
             locationList.Add(981, -1);
         }
+
+        public int getLocation(int mapId)
+        {
+            if (locationList.ContainsKey(mapId))
+            {
+                return locationList[mapId];
+            }
+            return -1;
+        }
     }
 }
 

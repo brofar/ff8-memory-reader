@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 
@@ -11,10 +12,39 @@ namespace FF8_Memory_Reader
         //Each draw point byte in the game's memory contains information for FOUR draw points.
         //Essentially the formula is SUM(i x status) from i=1 to i=4
         //          Full    Half    Empty   Exhausted
-        //1st point: +0     +1      +2      +3
-        //2nd point: +0     +4      +8      +12
-        //3rd point: +0     +16     +32     +48
-        //4th point: +0     +64     +128    +192
+        //1st point: +0     +1      +2      +3   
+        //2nd point: +0     +4      +8      +12  
+        //3rd point: +0     +16     +32     +48  
+        //4th point: +0     +64     +128    +192 
+        //In other words:
+        //Binary: 1 1 0 0 0 0 0 0
+        //   Pt 4 ^ ^
+        //   Pt 3     ^ ^
+        //   Pt 2         ^ ^
+        //   Pt 1             ^ ^
+        /*
+         * 1	00000001
+         * 2	00000010
+         * 3	00000011
+         * 4	00000100
+         * 8	00001000
+         * 12	00001100
+         * 16	00010000
+         * 32	00100000
+         * 48	00110000
+         * 64	01000000
+         * 128	10000000
+         * 192	11000000
+         * 255	11111111
+         */
+        [Flags]
+        public enum DrawPoints
+        {
+            AllFull = 0,
+            OneHalf = 1,
+            OneEmpty = 2,
+            OneExhausted = 3
+        }
 
         //Dictionary<Location ID, Magic ID>
         //Location of -1 = nowhere/unused.
@@ -294,10 +324,43 @@ namespace FF8_Memory_Reader
 
 
         }
-        public string GetDrawPoint(int locationId)
+        public List<FFVIIIDrawPoint> GetDrawPoints(int locationId)
         {
-            return "k";
-            //TODO
+            var drawList = new List<FFVIIIDrawPoint>();
+            foreach (FFVIIIDrawPoint d in drawPointList)
+            {
+                if(d.locationId == locationId)
+                {
+                    drawList.Add(d);
+                }
+            }
+            return drawList;
+        }
+
+        public int calculateDrawStatus(int memValueDecimal, int pointNumber)
+        {
+            //The index we should start reading.
+            var bitIndexStart = (pointNumber * 2) - 2;
+
+            var _bits = new BitArray((byte)memValueDecimal);
+            var thisPoint = new BitArray(2);
+
+            thisPoint[0] = _bits[bitIndexStart];
+            thisPoint[1] = _bits[bitIndexStart + 1];
+
+            return getIntFromBitArray(thisPoint);
+        }
+        private int getIntFromBitArray(BitArray bitArray)
+        {
+            int value = 0;
+
+            for (int i = 0; i < bitArray.Count; i++)
+            {
+                if (bitArray[i])
+                    value += Convert.ToInt16(Math.Pow(2, i));
+            }
+
+            return value;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace FF8_Memory_Reader
         {
             locationList = new Dictionary<int, string>();
 
+            locationList.Add(-1, "???");
             locationList.Add(1, "Balamb - Alcauld Plains");
             locationList.Add(2, "Balamb - Gaulg Mountains");
             locationList.Add(3, "Balamb - Rinaul Coast");
@@ -226,8 +227,8 @@ namespace FF8_Memory_Reader
             locationList.Add(213, "Ragnarok - Air Room");
             locationList.Add(214, "Ragnarok - Space Hatch");
             locationList.Add(215, "Deep Sea Research Center");
-            locationList.Add(216, "Deep Sea Research Center - Lb");
-            locationList.Add(217, "Deep Sea Research Center - Lv");
+            locationList.Add(216, "Deep Sea Research Center - Lobby");
+            locationList.Add(217, "Deep Sea Research Center - Levels");
             locationList.Add(218, "Deep Sea Deposit");
             locationList.Add(219, "Lunar Base - Control Room");
             locationList.Add(220, "Lunar Base - Medical Room");
@@ -260,6 +261,15 @@ namespace FF8_Memory_Reader
             locationList.Add(248, "Ultimecia Castle");
             locationList.Add(249, "Commencement Room");
             locationList.Add(250, "Queen of Cards");
+        }
+
+        public string getName(int locationId)
+        {
+            if (locationList.ContainsKey(locationId))
+            {
+                return locationList[locationId];
+            }
+            return "???";
         }
     }
 }

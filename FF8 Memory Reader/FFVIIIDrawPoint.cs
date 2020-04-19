@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FF8_Memory_Reader
 {
-    class FFVIIIDrawPoint
+    public class FFVIIIDrawPoint
     {
         //Bytelength for draw points is always 1 byte.
         public int locationId { get; set; }
